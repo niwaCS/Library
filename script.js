@@ -10,8 +10,11 @@ function Book(author, title, pages, read) {
 
 }
 
-function addBookToLibrary(book, id) {
+function addBookToLibrary(author, title, pages, read) {
 
+    let storedBooks = new Book(author, title, pages, read);
+
+    myLibrary.push(storedBooks);
 
 
 
