@@ -1,0 +1,21 @@
+
+
+body {
+    font-family: Georgia, serif;
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+}
+
+.bookDisplayContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.bookCards {
+    border: 1px solid #333;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+
+}
