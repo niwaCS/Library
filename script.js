@@ -10,6 +10,10 @@ function Book(author, title, pages, read) {
 
 }
 
+Book.prototype.readStatus = function() {
+    this.read = !this.read;
+}
+
 function addBookToLibrary(author, title, pages, read) {
 
     let storedBooks = new Book(author, title, pages, read);
@@ -126,6 +130,8 @@ bookForm.addEventListener('submit', (event) => {
     loopThroughBooks(myLibrary);
 
 });
+
+
 
 
 
