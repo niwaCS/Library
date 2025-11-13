@@ -35,6 +35,8 @@ function loopThroughBooks(arr) {
 
     for (let i = 0; i < arr.length; i++) {
 
+        
+
         let card = document.createElement('div'); 
 
         let titleElement = document.createElement('p');
@@ -61,10 +63,32 @@ function loopThroughBooks(arr) {
 
         card.classList.add('bookCards');
 
+        const currentBookId = arr[i].id;
+
+        let removeBtn = document.createElement("button");
+
+        removeBtn.textContent = "Remove";
+
+        card.append(removeBtn);
+
+        removeBtn.addEventListener('click', () => {
+            /* findIndex returns -1 if no item passes test, otherwise returns `true` */
+            let indexRemoval = myLibrary.findIndex(book => book.id === currentBookId);
+            if (indexRemoval > -1) {
+                myLibrary.splice(indexRemoval, 1);
+            }
+
+            loopThroughBooks(myLibrary);
 
 
 
+        });
 
+
+
+  
+
+    
     };
 
 
