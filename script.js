@@ -24,10 +24,6 @@ function addBookToLibrary(author, title, pages, read) {
 
 }
 
-addBookToLibrary("J.K. Rowling", "Harry Potter and the Philosopher's Stone", 223, true);
-addBookToLibrary("J.K. Rowling", "Harry Potter and the Chamber of Secrets", 251, true);
-addBookToLibrary("J.K. Rowling", "Harry Potter and the Prisoner of Azkaban", 317, false);
-addBookToLibrary("J.K. Rowling", "Harry Potter and the Goblet of Fire", 636, true);
 
 function loopThroughBooks(arr) {
 
