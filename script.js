@@ -1,17 +1,25 @@
 const myLibrary = [];
 
-function Book(author, title, pages, read) {
-    this.author = author;
-    this.title = title;
-    this.pages = pages;
-    this.id = crypto.randomUUID();
-    this.read = read;
+
+class Book {
+
+    constructor(author, title, pages, read) {
+
+        this.author = author;
+        this.title = title;
+        this.pages = pages;
+        this.id = crypto.randomUUID();
+        this.read = read;
+
+    }
+
+    readStatus() {
+        this.read = !this.read;
+    }
 
 
-}
 
-Book.prototype.readStatus = function() {
-    this.read = !this.read;
+
 }
 
 function addBookToLibrary(author, title, pages, read) {
@@ -147,6 +155,8 @@ bookForm.addEventListener('submit', (event) => {
 
     addBookToLibrary(authorVal, titleVal, pagesVal, readVal);
     bookDialogRef.close();
+
+    bookForm.reset();
 
     loopThroughBooks(myLibrary);
 
