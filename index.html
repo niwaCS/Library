@@ -30,15 +30,15 @@
         <form novalidate id="bookForm"> 
             <label for="author">Author *:</label> <!-- remove default validation -->
             <input type="text" id="author" name="author" required>
-            <span class="errorAuthor"></span>
+            <span class="errorAuthor" aria-live="polite"></span>
 
             <label for="title">Title *:</label>
             <input type="text" id="title" name="title" required>
-            <span class="errorTitle"></span>
+            <span class="errorTitle" aria-live="polite"></span>
 
             <label for="pages">Pages *:</label>
             <input type="number" id="pages" name="pages" required min="1">
-            <span class="errorPages"></span>
+            <span class="errorPages" aria-live="polite"></span>
 
             <div>
                 <label for="readInput">Read:</label>
