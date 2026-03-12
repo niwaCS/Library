@@ -151,10 +151,7 @@ cancelBtn.addEventListener('click', () => {
 
 bookForm.addEventListener('submit', (event) => {
     event.preventDefault(); /* prevent page reload */
-    let authorVal = document.getElementById('author').value;
-    let pagesVal = document.getElementById('pages').value;
-    let titleVal = document.getElementById('title').value;
-    let readVal = document.getElementById('readInput').checked;
+    let readRef = document.getElementById('readInput').checked;
 
     addBookToLibrary(authorVal, titleVal, pagesVal, readVal);
     bookDialogRef.close();
@@ -164,6 +161,43 @@ bookForm.addEventListener('submit', (event) => {
     loopThroughBooks(myLibrary);
 
 });
+
+
+
+function validateForm() {
+
+    const inputConfig = [
+        {
+            input: authorRef,
+            errorSpan: errorAuthorSpan,
+            errorMessage: "Please enter the authors name"
+        },
+
+        {
+            input: titleRef,
+            errorSpan: errorTitleSpan,
+            errorMessage: "Please enter a title"
+        },
+
+        {
+            input: pagesRef,
+            errorSpan: errorPagesSpan,
+            errorMessage: "Please enter pages number"
+        }, 
+    ];
+
+    inputConfig.forEach((formInput) => {
+        if (!formInput.input.checkValidity()) {
+            formInput.errorSpan.textContent = config.errorMessage;
+            return
+        } else {
+            errorAuthorSpan.textContent = "";
+        }
+    });
+
+
+
+}
 
 
 
