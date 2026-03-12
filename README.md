@@ -1,6 +1,6 @@
 ## Live Preview
 
-https://tsuwagi.github.io/Library/
+https://tsuwagyu.github.io/Library/
 
 
 # Library Management App
